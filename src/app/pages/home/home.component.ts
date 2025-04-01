@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { Post } from '../../interfaces/post.interface';
 import { setThrowInvalidWriteToSignalError } from '@angular/core/primitives/signals';
 import { RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'home',
@@ -13,6 +14,7 @@ import { RouterLink } from '@angular/router';
 export class HomeComponent {
   arrPosts: Post[] = [];
   categories: string[] = [];
+  filteredPosts = [...this.arrPosts];
 
   PostService = inject(PostService);
 
@@ -31,6 +33,21 @@ export class HomeComponent {
       this.arrPosts = this.PostService.getByCategory(htmlEl.value);
     }
     //we collocate a new array in the one we used before 
-
   }
+
+  onInput($event: Event) {
+    const inputHtmlEl = $event.target as HTMLInputElement
+    const query = inputHtmlEl.value.toLowerCase(); // Convert input to lowercase
+    console.log(inputHtmlEl)
+      //inputHtmlEl.value.toLowerCase();
+    this.filteredPosts = this.arrPosts.filter(post =>
+      post.title.toLowerCase().includes(query)
+    );
+    if (!query) {
+      this.filteredPosts = [...this.arrPosts];
+    }
+    console.log(inputHtmlEl.value)
+  }
+  
+
 }

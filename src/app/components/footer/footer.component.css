@@ -1,0 +1,27 @@
+footer {
+    /*position: sticky;*/
+    bottom: 0;
+    width: 100%;
+    background-color: #fee2c7;
+    color: black;
+}
+
+footer .footer {
+    display: flex;
+    justify-content: start;
+    padding: 15px 0;
+
+    p {
+        padding-left: 15px;
+        cursor: pointer;
+    }
+}
+
+.container {
+    max-width: 1004px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}

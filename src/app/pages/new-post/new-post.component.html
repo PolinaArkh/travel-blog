@@ -1,0 +1,61 @@
+<form [formGroup]="formPost" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12 col-md-6 offset-0 offset-md-3">
+                <div class="mb-3">
+                    <label class="form-label">Title</label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp" formControlName="title">
+                    @if(checkError('title', 'required')){
+                    <small>Title is required</small>
+                    }
+                </div>
+                <div>
+
+
+                    <select class="form-select" aria-label="Default select example" formControlName="category">
+                        <option selected>Category</option>
+                        <option value="Beach">Beach</option>
+                        <option value="Mountains">Mountains</option>
+                        <option value="City">City</option>
+                        <option value="Festivals">Festivals</option>
+
+
+                    </select>
+                    @if(checkError('category', 'required')){
+                    <small>Category is required</small>
+                    }
+                </div>
+                <label for="comment">Comments:</label>
+                <textarea class="form-control" rows="5" id="comment" name="text" formControlName="text"></textarea>
+                @if(checkError('text', 'required')){
+                <small>Comment is required</small>
+                }
+                <div class="mb-3">
+                    <label class="form-label">Image(url)</label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp" formControlName="image">
+                    @if(checkError('image', 'required')){
+                    <small>Image is required</small>
+                    }
+
+                    @if(checkError('image', 'pattern')){
+                    <small>Provide a correct image url</small>
+                    }
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Author</label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp" formControlName="author">
+
+                    @if(checkError('image', 'required')){
+                    <small>Author is required</small>
+                    }
+                </div>
+                <label>Publication date</label>
+                <input id="startDate" class="form-control" type="date" formControlName="date" />
+                @if(checkError('date', 'required')){
+                <small>Publication date is required</small>
+                }
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>

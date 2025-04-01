@@ -1,0 +1,25 @@
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+    border-color: tomato;
+}
+
+input.ng-valid.ng-touched,
+textarea.ng-valid.ng-touched {
+    border-color: green;
+}
+
+select.ng-invalid.ng-touched {
+    border-color: tomato;
+}
+
+select.ng-valid.ng-touched {
+    border-color: green;
+}
+
+small{
+    color: tomato
+}
+
+.btn{
+    margin-top: 15px;
+}

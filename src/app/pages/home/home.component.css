@@ -1,0 +1,24 @@
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.post {
+    width: 400px;
+    height: auto;
+    border: 1px solid #fee2c7;
+    padding: 5px;
+    
+
+    h2 {
+        text-align: center;
+    }
+}
+
+img{
+    height: auto;
+    width: 370px;
+}

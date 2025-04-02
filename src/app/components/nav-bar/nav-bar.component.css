@@ -6,7 +6,7 @@ header {
 }
 
 .header-nav {
-    background-color: #fee2c7;
+    background-color: #5e2a25; /*#6c3530*/
     width: 100%;
 }
 
@@ -27,12 +27,12 @@ header {
 }
 
 .nav-links li {
-    color: #2F4F4F;
+    color: #EFEBE7;
     cursor: pointer;
     font-size: larger;
     padding: 5px 7px;
     &:hover{
-        color: #a15b1a;
+        color: #536357;
         transition: .7s;
     }
 }

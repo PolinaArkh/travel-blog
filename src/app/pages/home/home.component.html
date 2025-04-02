@@ -1,4 +1,5 @@
-<div>
+<!--<div class="container">
+
     <label>Category</label>
     <select (change)="onChange($event)">
         <option value="">Select</option>
@@ -6,8 +7,41 @@
         <option [value]="category">{{category}}</option>
         }
     </select>
-</div>
+</div>-->
+<main id="hero">
+
+</main>
+
+
 <div class="container">
+    <div class="row d-flex justify-content-center align-items-center mt-3">
+
+        <div class="col-md-8">
+            <div class="d-flex gap-2 align-items-center">
+
+                <!-- Search Icon -->
+                <i class="fa fa-search fs-4"></i>
+
+                <!-- Search Input -->
+                <input (input)="onInput($event)" type="text" class="form-control"
+                    placeholder="What would you like to read?">
+
+                <!-- Category Dropdown -->
+                <label class="ms-2 fw-bold">Category</label>
+                <select class="form-select w-auto" (change)="onChange($event)">
+                    <option value="">Select</option>
+                    @for (category of categories; track $index) {
+                    <option [value]="category">{{category}}</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!--<div class="container">
 
     <div class="row height d-flex justify-content-center align-items-center">
 
@@ -16,29 +50,54 @@
             <div class="search">
                 <i class="fa fa-search"></i>
                 <input (input)="onInput($event)" type="text" class="form-control"
-                    placeholder="Have a question? Ask Now">
+                    placeholder="What would you like to read?">
 
             </div>
         </div>
     </div>
-</div>
+</div>-->
 
 
 
-<div class="posts">
+<!--<div class="posts">
 
     @for (post of arrPosts; track $index) {
     <div class="post" [routerLink]="['/post', post.id]">
+        <figure>
+            <img [src]="post.image" alt="">
+        </figure>
         <h2>{{post.title}}</h2>
         <p>{{post.text}}</p>
         <ul>
             <li>{{post.author}}</li>
-            <li>{{post.date}}</li>
+            <li>{{post.date | date}}</li>
             <li>{{post.category}}</li>
         </ul>
-        <figure>
-            <img [src]="post.image" alt="">
-        </figure>
+
     </div>
     }
+</div>-->
+
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-4 mb-4">
+        @for (post of arrPosts; track $index) {
+        <div class="col">
+            <div class="post card h-100" [routerLink]="['/post', post.id]">
+                <figure class="post-image">
+                    <img [src]="post.image" alt="Post Image" class="img-fluid">
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">{{post.title}}</h2>
+                    <p class="card-text">{{post.text}}</p>
+                    <ul class="list-unstyled">
+                        <li><strong>Author:</strong> {{post.author}}</li>
+                        <li><strong>Date:</strong> {{post.date | date}}</li>
+                        <li><strong>Category:</strong> {{post.category}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
 </div>

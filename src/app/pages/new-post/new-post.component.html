@@ -12,15 +12,17 @@
                 <div>
 
 
-                    <select class="form-select" aria-label="Default select example" formControlName="category">
-                        <option selected>Category</option>
-                        <option value="Beach">Beach</option>
-                        <option value="Mountains">Mountains</option>
-                        <option value="City">City</option>
-                        <option value="Festivals">Festivals</option>
-
-
-                    </select>
+                    <div class="mb-3">
+                        <label for="categorySelect" class="form-label category-label">Category</label>
+                        <select id="categorySelect" class="form-select" aria-label="Select a category"
+                            formControlName="category">
+                            <option selected disabled>Select a category</option>
+                            <option value="Beach">Beach</option>
+                            <option value="Mountains">Mountains</option>
+                            <option value="City">City</option>
+                            <option value="Festivals">Festivals</option>
+                        </select>
+                    </div>
                     @if(checkError('category', 'required')){
                     <small>Category is required</small>
                     }

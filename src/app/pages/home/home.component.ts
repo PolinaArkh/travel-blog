@@ -4,10 +4,11 @@ import { Post } from '../../interfaces/post.interface';
 import { setThrowInvalidWriteToSignalError } from '@angular/core/primitives/signals';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'home',
-  imports: [RouterLink],
+  imports: [RouterLink, DatePipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

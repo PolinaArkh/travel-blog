@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
 export class HomeComponent {
   arrPosts: Post[] = [];
   categories: string[] = [];
-  filteredPosts = [...this.arrPosts];
+  filteredPosts: Post[] = [];
 
   PostService = inject(PostService);
 
@@ -23,7 +23,7 @@ export class HomeComponent {
     //when we start the app --> the array of categories will appear
     this.categories = this.PostService.getCategories();
   }
-   //will get the category once it's chosen in the select
+  //will get the category once it's chosen in the select
   onChange($event: Event) {
     const htmlEl = $event.target as HTMLSelectElement;
     console.log(htmlEl.value)
@@ -35,7 +35,7 @@ export class HomeComponent {
     //we collocate a new array in the one we used before 
   }
 
-  onInput($event: Event) {
+  /*onInput($event: Event) {
     const inputHtmlEl = $event.target as HTMLInputElement
     const query = inputHtmlEl.value.toLowerCase(); // Convert input to lowercase
     console.log(inputHtmlEl)
@@ -47,7 +47,19 @@ export class HomeComponent {
       this.filteredPosts = [...this.arrPosts];
     }
     console.log(inputHtmlEl.value)
-  }
+  }*/
   
-
+  onInput($event: Event) {
+    const inputHtmlEl = $event.target as HTMLInputElement
+    console.log('inputHtmlEl ' + inputHtmlEl.value)
+    if (inputHtmlEl.value) {
+      this.filteredPosts = this.PostService.getAll().filter(post =>
+        post.title.toLowerCase().includes(inputHtmlEl.value.toLowerCase())
+      );
+      this.arrPosts = this.filteredPosts
+    } else {
+      this.filteredPosts = this.PostService.getAll();
+      console.log('this.filteredPosts ', this.filteredPosts)
+    }
+  }
 }

@@ -59,7 +59,7 @@ export const posts: Post[] = [
         author: "Aisha Hassan",
         image: "https://www.shirlontheroad.com/wp-content/uploads/2021/03/30671570533_ba271b652f_k.jpg",
         date: new Date(2025, 3, 5),
-        category: "markets",
+        category: "city",
     },
     {
         id: 7,
@@ -69,7 +69,7 @@ export const posts: Post[] = [
         author: "Nikos Petros",
         image: "https://pangovet.com/wp-content/uploads/2024/06/Red-cat-looks-at-the-sea-early-in-the-morning-Santorini-island-Greece-Santorines-Shutterstock-e1671124275665.jpg",
         date: new Date(2025, 4, 12),
-        category: "sea",
+        category: "beach",
     },
     {
         id: 8,
@@ -89,7 +89,7 @@ export const posts: Post[] = [
         author: "Nathan Carter",
         image: "https://www.mpalalive.org/uploads/gallery/african-wildcat_gallery_7.jpg",
         date: new Date(2025, 6, 18),
-        category: "wildlife",
+        category: "rural",
     },
     {
         id: 10,
@@ -99,7 +99,7 @@ export const posts: Post[] = [
         author: "Olivia Johansson",
         image: "https://i.ytimg.com/vi/pNvGILcWS2I/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCfwqWkWb0CrrNk608PG3ZN8LopUQ",
         date: new Date(2025, 11, 22),
-        category: "winter",
+        category: "rural",
     },
     {
         id: 11,
@@ -119,6 +119,6 @@ export const posts: Post[] = [
         author: "James Miller",
         image: "https://budgetpetcare.weebly.com/uploads/2/6/3/7/26374331/can-cats-swim_orig.jpg",
         date: new Date(2025, 5, 14),
-        category: "road trip",
+        category: "beach",
     }
 ];

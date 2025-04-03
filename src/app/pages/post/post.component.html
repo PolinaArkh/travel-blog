@@ -1,14 +1,15 @@
-<section class="mt-3">
+<section class="mt-3 container">
     <div class="row">
         <figure class="col-12 col-md-3">
             <img class="img-fluid" [src]="post?.image" alt="">
         </figure>
         <div class="content col-12 col-md-9">
-            <h1>{{post?.text}}</h1>
+            <h1>{{post?.title}}</h1>
             <hr>
-            <p><strong>{{post?.category}}</strong></p>
-            <p><strong>{{post?.author}}</strong></p>
-            <button class="btn btn-warning" [routerLink]="['/home']">Volver a listado</button>
+            <h3>{{post?.text}}</h3>
+            <p class="category"><strong>{{post?.category}}</strong></p>
+            <p class="author"><strong>{{post?.author}}</strong></p>
+            <button class="btn" [routerLink]="['/home']">Back to posts</button>
         </div>
     </div>
 </section>

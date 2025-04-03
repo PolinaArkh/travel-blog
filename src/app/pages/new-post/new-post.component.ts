@@ -26,6 +26,9 @@ export class NewPostComponent {
       category: new FormControl(null, [
         Validators.required
       ]),
+       preview: new FormControl(null, [
+        Validators.required
+      ]),
       text: new FormControl(null, [
         Validators.required
       ]),
@@ -46,7 +49,7 @@ export class NewPostComponent {
     if (this.formPost.valid) {
       const newPost: Post = this.formPost.value;
       this.PostService.addPost(newPost);
-      console.log(this.formPost.value);
+      alert('Your post successfully added')
       this.formPost.reset();
     }
   }

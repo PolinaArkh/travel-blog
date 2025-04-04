@@ -69,7 +69,6 @@ export class NewPostComponent {
   }
 
   checkError(controlName: string, errorName: string) {
-    //any error of any control
     return this.formPost.get(controlName)?.hasError(errorName) && this.formPost.get(controlName)?.touched
   }
 

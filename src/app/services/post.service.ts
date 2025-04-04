@@ -14,7 +14,7 @@ export class PostService {
     return posts
   }
 
-  //get's an array of categories from the service
+  //gets an array of categories from the service
   getCategories(): string[]{
     const categories: string[] = [];
       for (let post of posts) {
@@ -25,22 +25,18 @@ export class PostService {
     return categories;
   }
 
+  //filters posts by selected categories
   getByCategory(category: string): Post[] {
     return posts.filter((post) => post.category === category);
-      //return movie.genre === 
-      /*if (movie.genre === genre) {
-        return true
-      } return false;*/
-   
-    //no need to use additional variable
   }
 
+  //used to open one particular post, using its id
   getPostById(postId: number) {
     
     return posts.find((post) => post.id === postId)
   }
 
-
+  //used to add new posts into the existing array of posts
    addPost(post: Post) {
     post.id = this.postsNeeded.length + 1;
     this.postsNeeded.push(post);

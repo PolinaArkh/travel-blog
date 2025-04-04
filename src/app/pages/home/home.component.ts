@@ -21,10 +21,9 @@ export class HomeComponent {
 
   ngOnInit() {
     this.arrPosts = this.PostService.getAll();
-    //when we start the app --> the array of categories will appear
     this.categories = this.PostService.getCategories();
   }
-  //will get the category once it's chosen in the select
+
   onChange($event: Event) {
     const htmlEl = $event.target as HTMLSelectElement;
     console.log(htmlEl.value)
@@ -33,22 +32,7 @@ export class HomeComponent {
     } else {
       this.arrPosts = this.PostService.getByCategory(htmlEl.value);
     }
-    //we collocate a new array in the one we used before 
   }
-
-  /*onInput($event: Event) {
-    const inputHtmlEl = $event.target as HTMLInputElement
-    const query = inputHtmlEl.value.toLowerCase(); // Convert input to lowercase
-    console.log(inputHtmlEl)
-      //inputHtmlEl.value.toLowerCase();
-    this.filteredPosts = this.arrPosts.filter(post =>
-      post.title.toLowerCase().includes(query)
-    );
-    if (!query) {
-      this.filteredPosts = [...this.arrPosts];
-    }
-    console.log(inputHtmlEl.value)
-  }*/
   
   onInput($event: Event) {
     const inputHtmlEl = $event.target as HTMLInputElement

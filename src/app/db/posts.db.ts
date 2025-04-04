@@ -9,7 +9,7 @@ export const posts: Post[] = [
         author: "Emily Carter",
         image: "https://t3.ftcdn.net/jpg/02/03/26/82/360_F_203268202_Wxy51M8jTy6S4JfGQ1czZNedBrROn95A.jpg",
         date: new Date(2025, 2, 28),
-        category: "beach",
+        category: "Beach",
     },
  {
         id: 2,
@@ -19,7 +19,7 @@ export const posts: Post[] = [
         author: "John Smith",
         image: "https://media-be.chewy.com/wp-content/uploads/2020/06/17125926/adventure-cat-rio-9.jpg",
         date: new Date(2025, 2, 20),
-        category: "mountains",
+        category: "Mountains",
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ export const posts: Post[] = [
         author: "Sophia Martinez",
         image: "https://www.travelawaits.com/wp-content/uploads/2021/05/shutterstock_536153089.jpg?fit=1200%2C1200",
         date: new Date(2025, 1, 15),
-        category: "rural",
+        category: "Rural",
     },
     {
         id: 4,
@@ -39,7 +39,7 @@ export const posts: Post[] = [
         author: "David Kim",
         image: "https://www.munchiecat.com/cdn/shop/articles/cats_in_japanese_cat_cafe_d6c71cd1-9c99-4c9c-9260-ad39b0391558_600x.webp?v=1705180781",
         date: new Date(2025, 2, 10),
-        category: "city",
+        category: "City",
     },
     {
         id: 5,
@@ -49,7 +49,7 @@ export const posts: Post[] = [
         author: "Lucas Oliveira",
         image: "https://img.freepik.com/premium-photo/cat-wearing-colorful-brazilian-carnival-costume-with-feathers-sequins_1358869-1565.jpg",
         date: new Date(2025, 1, 25),
-        category: "festivals",
+        category: "Festivals",
     },
     {
         id: 6,
@@ -59,7 +59,7 @@ export const posts: Post[] = [
         author: "Aisha Hassan",
         image: "https://www.shirlontheroad.com/wp-content/uploads/2021/03/30671570533_ba271b652f_k.jpg",
         date: new Date(2025, 3, 5),
-        category: "city",
+        category: "City",
     },
     {
         id: 7,
@@ -69,7 +69,7 @@ export const posts: Post[] = [
         author: "Nikos Petros",
         image: "https://pangovet.com/wp-content/uploads/2024/06/Red-cat-looks-at-the-sea-early-in-the-morning-Santorini-island-Greece-Santorines-Shutterstock-e1671124275665.jpg",
         date: new Date(2025, 4, 12),
-        category: "beach",
+        category: "Beach",
     },
     {
         id: 8,
@@ -79,7 +79,7 @@ export const posts: Post[] = [
         author: "Emma Wilson",
         image: "https://www.usatoday.com/gcdn/authoring/authoring-images/2024/05/20/USAT/73772641007-max-the-cat-1.jpg?width=660&height=441&fit=crop&format=pjpg&auto=webp",
         date: new Date(2025, 9, 5),
-        category: "rural",
+        category: "Rural",
     },
     {
         id: 9,
@@ -89,7 +89,7 @@ export const posts: Post[] = [
         author: "Nathan Carter",
         image: "https://www.mpalalive.org/uploads/gallery/african-wildcat_gallery_7.jpg",
         date: new Date(2025, 6, 18),
-        category: "rural",
+        category: "Rural",
     },
     {
         id: 10,
@@ -99,7 +99,7 @@ export const posts: Post[] = [
         author: "Olivia Johansson",
         image: "https://i.ytimg.com/vi/pNvGILcWS2I/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCfwqWkWb0CrrNk608PG3ZN8LopUQ",
         date: new Date(2025, 11, 22),
-        category: "rural",
+        category: "Rural",
     },
     {
         id: 11,
@@ -109,7 +109,7 @@ export const posts: Post[] = [
         author: "Hiroshi Tanaka",
         image: "https://pangovet.com/wp-content/uploads/2024/06/Cat-in-the-Japanese-arches-in-Kyoto-Fushimi-Inari-Temple_FOTOGRIN_Shutterstock.jpeg",
         date: new Date(2025, 3, 28),
-        category: "city",
+        category: "City",
     },
     {
         id: 12,
@@ -119,6 +119,6 @@ export const posts: Post[] = [
         author: "James Miller",
         image: "https://budgetpetcare.weebly.com/uploads/2/6/3/7/26374331/can-cats-swim_orig.jpg",
         date: new Date(2025, 5, 14),
-        category: "beach",
+        category: "Beach",
     }
 ];
